@@ -1088,7 +1088,7 @@
     const root = document.documentElement;
     const toggle = document.getElementById('themeToggle');
     const saved = localStorage.getItem('theme');
-    if (saved === 'dark') root.classList.add('dark-theme');
+    if (saved !== 'light') root.classList.add('dark-theme');
 
     toggle.addEventListener('click', function() {
       root.classList.toggle('dark-theme');
