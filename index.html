@@ -539,6 +539,50 @@
     margin-bottom: 20px;
   }
 
+  /* ── SKILLS GRID (card style) ── */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .skill-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 26px;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .skill-card:hover { border-color: var(--border-soft); transform: translateY(-3px); }
+
+  .skill-card-icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    background: var(--accent-dim);
+    border: 1px solid var(--accent-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 19px;
+    margin-bottom: 16px;
+  }
+
+  .skill-card-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 14px;
+  }
+
+  @media (max-width: 900px) {
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 600px) {
+    .skills-grid { grid-template-columns: 1fr; }
+  }
+
   .skill-item {
     margin-bottom: 18px;
   }
@@ -795,7 +839,7 @@
         <div class="stat-label">Dean's Honor</div>
       </div>
       <div class="stat-card">
-        <div class="stat-num">4+</div>
+        <div class="stat-num">5+</div>
         <div class="stat-label">Projects</div>
       </div>
       <div class="stat-card">
@@ -884,75 +928,104 @@
       </div>
       <a href="https://github.com/MonsurFuad/claims-qa-and-analysis-pipeline" target="_blank" class="project-link">View on GitHub →</a>
     </div>
+
+    <div class="project-card fade-in" style="transition-delay: 0.4s;">
+      <div class="project-icon">📈</div>
+      <div class="project-name">Retail Sales Data Model</div>
+      <p class="project-desc">Power BI data modeling project built on a star schema — linking sales transactions, revenue targets, and inventory through a shared date dimension. Includes row-level security for region-based access control and a custom sales performance dashboard.</p>
+      <div class="exp-tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">DAX</span>
+        <span class="tag">Data Modeling</span>
+        <span class="tag">Row-Level Security</span>
+      </div>
+      <a href="https://github.com/MonsurFuad/retail-sales-data-model" target="_blank" class="project-link">View on GitHub →</a>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-label fade-in">Skills</div>
-  <h2 class="section-title fade-in">What I Work With</h2>
+  <h2 class="section-title fade-in">Technical Skills</h2>
 
-  <div class="skills-layout">
-    <div class="fade-in">
-      <div class="skill-group-title">Technical Skills</div>
-
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Python</span><span class="skill-pct">95%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="95"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Machine Learning</span><span class="skill-pct">88%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">SQL</span><span class="skill-pct">85%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="85"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Data Analysis</span><span class="skill-pct">90%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="90"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Federated Learning</span><span class="skill-pct">78%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="78"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Time-Series Modelling</span><span class="skill-pct">82%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="82"></div></div>
+  <div class="skills-grid">
+    <div class="skill-card fade-in">
+      <div class="skill-card-icon">💻</div>
+      <div class="skill-card-title">Languages & Querying</div>
+      <div class="exp-tags">
+        <span class="tag">Python</span>
+        <span class="tag">R</span>
+        <span class="tag">SQL</span>
+        <span class="tag">MySQL</span>
+        <span class="tag">PostgreSQL</span>
       </div>
     </div>
 
-    <div class="fade-in" style="transition-delay: 0.1s;">
-      <div class="skill-group-title">Tools & Platforms</div>
+    <div class="skill-card fade-in" style="transition-delay: 0.05s;">
+      <div class="skill-card-icon">📊</div>
+      <div class="skill-card-title">Visualisation & BI</div>
+      <div class="exp-tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Excel</span>
+        <span class="tag">Dashboard Design</span>
+        <span class="tag">KPI Reporting</span>
+      </div>
+    </div>
 
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">PyTorch & Scikit-Learn</span><span class="skill-pct">88%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="88"></div></div>
+    <div class="skill-card fade-in" style="transition-delay: 0.1s;">
+      <div class="skill-card-icon">🧠</div>
+      <div class="skill-card-title">ML & AI</div>
+      <div class="exp-tags">
+        <span class="tag">Statistical Modelling</span>
+        <span class="tag">Predictive Analytics</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Deep Learning</span>
+        <span class="tag">Federated Learning</span>
       </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Pandas & NumPy</span><span class="skill-pct">92%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="92"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Power BI & Tableau</span><span class="skill-pct">80%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="80"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Excel (Advanced)</span><span class="skill-pct">88%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="88"></div></div>
-      </div>
-      <div class="skill-item">
-        <div class="skill-row"><span class="skill-name">Matplotlib & Statsmodels</span><span class="skill-pct">84%</span></div>
-        <div class="skill-track"><div class="skill-fill" data-pct="84"></div></div>
-      </div>
+    </div>
 
-      <div style="margin-top: 32px;">
-        <div class="skill-group-title">Languages</div>
-        <div class="lang-pills">
-          <div class="lang-pill">Bengali (Native)</div>
-          <div class="lang-pill">English (Proficient)</div>
-        </div>
+    <div class="skill-card fade-in" style="transition-delay: 0.15s;">
+      <div class="skill-card-icon">🗂️</div>
+      <div class="skill-card-title">Data Engineering</div>
+      <div class="exp-tags">
+        <span class="tag">Data Modeling</span>
+        <span class="tag">Data Pipelines</span>
+        <span class="tag">Data Cleaning</span>
+        <span class="tag">DAX</span>
       </div>
+    </div>
+
+    <div class="skill-card fade-in" style="transition-delay: 0.2s;">
+      <div class="skill-card-icon">🛠️</div>
+      <div class="skill-card-title">Tools & Platforms</div>
+      <div class="exp-tags">
+        <span class="tag">Git</span>
+        <span class="tag">Jupyter</span>
+        <span class="tag">PyTorch</span>
+        <span class="tag">Scikit-Learn</span>
+        <span class="tag">Pandas & NumPy</span>
+      </div>
+    </div>
+
+    <div class="skill-card fade-in" style="transition-delay: 0.25s;">
+      <div class="skill-card-icon">🧪</div>
+      <div class="skill-card-title">Methods</div>
+      <div class="exp-tags">
+        <span class="tag">Time-Series Modelling</span>
+        <span class="tag">Differential Privacy</span>
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">A/B Testing</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top: 32px;">
+    <div class="skill-group-title fade-in">Languages</div>
+    <div class="lang-pills fade-in">
+      <div class="lang-pill">Bengali (Native)</div>
+      <div class="lang-pill">English (Proficient)</div>
     </div>
   </div>
 </section>
@@ -1058,7 +1131,7 @@
     <div class="award-item fade-in" style="transition-delay: 0.2s;">
       <div class="award-icon">⚽</div>
       <div>
-        <div class="award-title">Executive Member — UU Sports Club</div>
+        <div class="award-title">Event Secretary — UU Sports Club</div>
         <div class="award-desc">Managed events and promoted team activities across the university as part of the Sports Club's executive team.</div>
       </div>
     </div>
